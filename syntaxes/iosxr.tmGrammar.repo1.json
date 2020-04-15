@@ -26,11 +26,11 @@
       "acl": { 
         "patterns": [ 
             {
-            "match": "\\bipv[4|6]\\saccess-(group|list)\\s(.*) (\\w+)",
+            "match": "\\bipv[4|6]\\saccess-(group|list)\\s((\\w+-*)+)\\s?(ingress|egress)?",
             "captures": { 
                 "0": { "name": "support.function.acl.iosxr"}, 
                 "2": { "name": "variable.aclname.iosxr"},  
-                "3": { "name": "keyword.acldir.iosxr"}  
+                "4": { "name": "keyword.acldir.iosxr"}  
                 }
             },
             {
@@ -187,7 +187,7 @@
       "name": "support.type.routing.iosxr"
     },
     {
-      "match": "(username|group|end-group|apply-group|accounting|clock|hw-module|hostname|logging|cdp|ntp|lldp|netconf-yang|grpc|frequency|gnss-receiver|key|domain|call-home|line|telemetry|bfd|control-plane|lawful-intercept|vty-pool|xml|aaa|controller|license|lpts|gnss-receiver|fpd|taskgroup|usergroup|service|hw-platform|(snmp|radius|tacacs|telnet|ssh)(-server)?)\\b", 
+      "match": "^(username|group|end-group|apply-group|accounting|clock|hw-module|hostname|logging|cdp|ntp|lldp|netconf-yang|grpc|frequency|gnss-receiver|key|domain|call-home|line|telemetry|bfd|control-plane|lawful-intercept|vty-pool|xml|aaa|controller|license|lpts|gnss-receiver|fpd|taskgroup|usergroup|service|hw-platform|(snmp|radius|tacacs|telnet|ssh)(-server)?)\\b", 
       "name": "keyword.control.system.iosxr"
     },
     {
@@ -195,10 +195,10 @@
       "name": "constant.character.escape.services.iosxr"
     },
     {
-      "match": "\\bvrf\\s(\\w*)",
+      "match": "(^|\\s)vrf\\s((\\w+-?)*)",
           "captures": { 
               "0": { "name": "constant.character.escape.vrf.iosxr" }, 
-              "1": { "name": "variable.vrf.name.iosxr" } 
+              "2": { "name": "variable.vrf.name.iosxr" } 
               }
     },
     {
