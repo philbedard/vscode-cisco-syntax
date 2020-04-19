@@ -29,7 +29,7 @@
         "snippets": [
             {
                 "language": "cisco-iosxr-test",
-                "path": "./snippets/snippets.xr.json"
+                "path": "./snippets/snippets.iosxr.json"
             }
         ],
         "grammars": [
