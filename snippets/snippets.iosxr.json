@@ -4,7 +4,24 @@
 		"body": [ 
 			"encapsulation dot1q ${1:vlan}"	], 
 		"description": "Set dot1q encap."
-	}, 
+	},
+	"Add vrf global IPv4": {
+		"prefix": "vrf",
+		"body": [
+			"vrf ${1:id}",
+			" description ${2:desc}",
+			"  import route-target",
+			"   ${3:import_rt}", 
+			"   !", 
+			"  export route-target",
+			"   ${4:import_rt}"
+			"   !", 
+			" rd ${5:rd}",
+			" !", 
+			"$0"
+		],
+		"description": "Add vlan to vlan-database"
+	},
 	"Add vlan": {
 		"prefix": "add-vlan",
 		"body": [
