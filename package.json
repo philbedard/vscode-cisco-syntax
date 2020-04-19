@@ -1,8 +1,8 @@
 {
-    "name": "iosxr",
-    "displayName": "Cisco IOS-XR Syntax",
-    "description": "Cisco IOS-XR Syntax Highlighter",
-    "version": "1.0.0",
+    "name": "iosxr-test",
+    "displayName": "Cisco IOS-XR Syntax Testing",
+    "description": "Cisco IOS-XR Syntax Testing",
+    "version": "2.0.0",
     "publisher": "Phil Bedard",
     "icon": "images/cisco.png",
     "license": "MIT",
@@ -19,23 +19,24 @@
     "contributes": {
         "languages": [
             {
-                "id": "cisco-iosxr",
-                "aliases": [
-                    "iosxr", 
-                    "ios-xr" 
-                ],
+                "id": "cisco-iosxr-test",
                 "extensions": [
-                    ".xr", 
-                    ".iosxr"
+                    ".xrt"
                 ],
-                "configuration": "./language-configuration.json"
+                "configuration": "./language-configuration-test.json"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "cisco-iosxr-test",
+                "path": "./snippets/snippets.xr.json"
             }
         ],
         "grammars": [
             {
-                "language": "cisco-iosxr",
+                "language": "cisco-iosxr-test",
                 "scopeName": "text.iosxr",
-                "path": "./syntaxes/iosxr.tmGrammar.repo.json"  
+                "path": "./syntaxes/iosxr.tmGrammar.test.json"  
             }
         ]
     }
