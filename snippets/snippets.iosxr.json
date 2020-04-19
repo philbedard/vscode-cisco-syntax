@@ -1,5 +1,11 @@
 {
-"Add vlan": {
+	"encapsulation dot1q": { 
+		"prefix": [ "encap", "encapsulation" ], 
+		"body": [ 
+			"encapsulation dot1q ${1:vlan}"	], 
+		"description": "Set dot1q encap."
+	}, 
+	"Add vlan": {
 		"prefix": "add-vlan",
 		"body": [
 			"vlan ${1:id}",
