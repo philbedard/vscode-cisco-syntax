@@ -171,11 +171,15 @@
       "name": "variable.physinterface.iosxr" 
     }, 
     {
+      "match": "\\bBundle-Ether[0-9.\/-]+", 
+      "name": "variable.physinterface.iosxr" 
+    }, 
+    {
       "match": "\\b(Ten|TwentyFive|Forty|Hundred|FourHundred)?GigE[0-9.\/-]+", 
       "name": "variable.physinterface.iosxr" 
     }, 
     {
-      "match": "\\b(Loopback|Bundle-Ether|BVI)[0-9]+", 
+      "match": "\\b(Loopback|BVI)[0-9]+", 
       "name": "variable.logicalinterface.iosxr" 
     }, 
     {
