@@ -35,7 +35,7 @@
         "grammars": [
             {
                 "language": "cisco-iosxr-test",
-                "scopeName": "text.iosxr",
+                "scopeName": "text.iosxr-test",
                 "path": "./syntaxes/iosxr.tmGrammar.test.json"  
             }
         ]
